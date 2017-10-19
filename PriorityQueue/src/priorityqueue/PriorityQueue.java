@@ -17,7 +17,7 @@ public class PriorityQueue {
     public static void main(String[] args) {
         
         //ArraySortedDescending obj = new ArraySortedDescending();
-        ArrayUnsortedWithRef obj = new ArrayUnsortedWithRef();
+        Heap obj = new Heap();
         
         //LinkedList obj =new LinkedList();
         obj.insert("Muaaz",2);
@@ -36,9 +36,17 @@ public class PriorityQueue {
         obj.delete();
         System.out.println("");
         obj.print();
-        
-        
-        
+         obj.delete();
+        System.out.println("");       
+        obj.print();
+         obj.delete();
+        System.out.println("");        
+        obj.print();
+         obj.delete();
+        System.out.println("");        
+        obj.print();
+         obj.delete();
+        System.out.println("");        
         
     }
     
