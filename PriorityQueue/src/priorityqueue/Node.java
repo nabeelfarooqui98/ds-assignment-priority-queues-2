@@ -7,7 +7,7 @@ package priorityqueue;
 
 /**
  *
- * @author k163643
+ * @author k163628
  */
 public class Node {
     String name;

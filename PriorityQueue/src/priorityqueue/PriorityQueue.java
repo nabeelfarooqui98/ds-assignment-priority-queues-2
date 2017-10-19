@@ -15,12 +15,29 @@ public class PriorityQueue {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        LinkedList obj =new LinkedList();
+        
+        Array obj = new Array();
+        
+        
+        //LinkedList obj =new LinkedList();
         obj.insert("Muaaz",2);
         obj.insert("Nabeel", 1);
         obj.insert("Ubaid", 1);
+        obj.insert("Pasa", 90);
+        obj.insert("Hamza", 3);
+        obj.insert("Suleman", 4);
+        obj.insert("Umair", 3);
+        obj.insert("Pasa", 1);
+        obj.insert("abc", 2);
+        obj.insert("def", 2);
+        
         
         obj.print();
+        obj.delete();
+        System.out.println("");
+        obj.print();
+        
+        
         
         
     }

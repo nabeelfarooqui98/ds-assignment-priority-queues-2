@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package priorityqueue;
 
 /**
  *
- * @author k163627
+ * @author k163628
  */
 public class LinkedList {
 
@@ -29,53 +24,81 @@ public class LinkedList {
         if (pri < temp.priority) {
             newNode.next = head;
             head = newNode;
-            
+
         } else if (pri > temp.priority) {
-            
+
             while (true) {
-                if (pri > temp.next.priority) {
-                    temp = temp.next;
-                } else if (pri < temp.next.priority) {
+                if (temp.next != null) {
+
+                    if (pri > temp.next.priority) {
+                        temp = temp.next;
+                    } else if (pri < temp.next.priority) {
+                        newNode.next = temp.next;
+                        temp.next = newNode;
+                        break;
+                    }
+                    else if (pri == temp.next.priority) {
+                        
+                        temp=temp.next;
+
+                        while (true) {
+                            if (temp.next != null) {
+                                if (pri == temp.next.priority) {
+                                    temp = temp.next;
+                                } else if (pri != temp.next.priority) {
+                                    newNode.next = temp.next;
+                                    temp.next = newNode;
+                                    break;
+                                }
+                            } else {
+                                newNode.next = temp.next;
+                                temp.next = newNode;
+                                break;
+                            }
+                        }break;
+                        
+
+                    }
+
+                } else {
                     newNode.next = temp.next;
                     temp.next = newNode;
                     break;
                 }
-                else if (pri == temp.priority) {
-            while (true) {
-                if (pri == temp.next.priority) {
-                    temp = temp.next;
-                } else if (pri != temp.next.priority) {
-                    temp.next = newNode.next;
-                    temp.next = newNode;
-                    break;
-                }
             }
-        }
-            }
-            
-            
+
         } else if (pri == temp.priority) {
+
             while (true) {
-                if (pri == temp.next.priority) {
-                    temp = temp.next;
-                } else if (pri != temp.next.priority) {
-                    temp.next = newNode.next;
+                if (temp.next != null) {
+                    if (pri == temp.next.priority) {
+                        temp = temp.next;
+                    } else if (pri != temp.next.priority) {
+                        newNode.next = temp.next;
+                        temp.next = newNode;
+                        break;
+                    }
+                } else {
+                    newNode.next = temp.next;
                     temp.next = newNode;
                     break;
                 }
             }
+
         }
     }
 
+    
+    
     public void print() {
-        Node temp=head;
-        if(head== null){
+        Node temp = head;
+        if (head == null) {
             return;
         }
-        while(temp != null){
-            System.out.println(temp.name+" "+temp.priority);
-            temp=temp.next;
-            
+        while (temp != null) {
+            System.out.println(temp.name + " " + temp.priority);
+            temp = temp.next;
+
         }
 
     }
