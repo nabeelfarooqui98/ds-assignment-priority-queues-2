@@ -14,7 +14,7 @@ import java.util.Collections;
  *
  * @author K163628
  */
-public class Array {
+public class ArraySortedDescending {
     ArrayList<Node> arr=new ArrayList<>(); 
     
  

@@ -16,7 +16,7 @@ public class PriorityQueue {
      */
     public static void main(String[] args) {
         
-        Array obj = new Array();
+        ArraySortedDescending obj = new ArraySortedDescending();
         
         
         //LinkedList obj =new LinkedList();
