@@ -4,11 +4,11 @@ package priorityqueue;
  *
  * @author k163628
  */
-public class LinkedList {
+public class LinkedListSorted {
 
     Node head;
 
-    public LinkedList() {
+    public LinkedListSorted() {
         head = null;
     }
 
