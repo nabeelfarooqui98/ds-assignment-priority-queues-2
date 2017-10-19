@@ -16,11 +16,7 @@ import java.util.Collections;
  */
 public class ArraySortedDescending {
     ArrayList<Node> arr=new ArrayList<>(); 
-    
- 
-    void setdata(String n,int p){
-        
-    }
+
     
     public void insert(String n, int p)
     {
