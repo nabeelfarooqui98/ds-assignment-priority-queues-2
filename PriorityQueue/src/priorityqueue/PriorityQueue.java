@@ -17,7 +17,7 @@ public class PriorityQueue {
     public static void main(String[] args) {
         
         //ArraySortedDescending obj = new ArraySortedDescending();
-        ArrayUnsorted obj = new ArrayUnsorted();
+        ArrayUnsortedWithRef obj = new ArrayUnsortedWithRef();
         
         //LinkedList obj =new LinkedList();
         obj.insert("Muaaz",2);
